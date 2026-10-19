@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zenith Project – Détail du projet | Rivo Andriharisoa</title>
+    <meta
+      name="description"
+      content="Découvrez le site de présentation de Zenith Project et ses opportunités professionnelles internationales."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../assets/images/logo_fenetre.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../css/project-detail.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="../../index.html#top">
+          <span class="logo-icon" aria-hidden="true">
+            <img
+              class="logo-image logo-image-light"
+              src="../../assets/images/logo_mode_claire.png"
+              alt=""
+            />
+            <img
+              class="logo-image logo-image-dark"
+              src="../../assets/images/logo_mode_sombre.png"
+              alt=""
+            />
+          </span>
+          <span>Rivo Andriharisoa</span>
+        </a>
+        <nav id="navigation-principale" aria-label="Navigation principale">
+          <a href="../../index.html#services">Services</a>
+          <a href="../../index.html#projets">Projets</a>
+          <a href="../../index.html#apropos">À propos</a>
+          <a href="../../index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Activer le mode sombre"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+              ></path>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="navigation-principale"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="project-detail-main" id="top">
+      <section class="project-detail" aria-labelledby="project-title">
+        <div class="wrap">
+          <a
+            class="project-back-link project-detail-reveal"
+            href="../../index.html#projets"
+            aria-label="Retour à la liste des projets"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 12H5m7 7-7-7 7-7"></path>
+            </svg>
+          </a>
+          <div class="project-detail-heading project-detail-reveal">
+            <span class="section-eyebrow">Site web · Recrutement</span>
+            <h1 id="project-title">Zenith Project</h1>
+            <p class="project-detail-lead">
+              Un site qui présente les services de Zenith et met en avant les
+              opportunités professionnelles internationales destinées aux
+              talents de Madagascar.
+            </p>
+          </div>
+
+          <figure class="project-detail-image project-detail-reveal">
+            <img
+              class="project-image-light"
+              src="../../assets/images/zenith_mode_claire.png"
+              alt="Page d’accueil Zenith présentant ses services de recrutement international"
+            />
+            <img
+              class="project-image-dark"
+              src="../../assets/images/zenith_mode_sombre.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </figure>
+
+          <div class="project-detail-content">
+            <article class="project-detail-block project-detail-reveal">
+              <h2>Le problème</h2>
+              <p>
+                Les talents qui cherchent une expérience professionnelle à
+                l’international ont besoin de comprendre rapidement ce que
+                propose le service, quelles opportunités sont accessibles et où
+                commencer. Le défi est de rendre ces informations visibles et
+                faciles à parcourir depuis un même point d’entrée.
+              </p>
+            </article>
+            <article class="project-detail-block project-detail-reveal">
+              <h2>La solution</h2>
+              <p>
+                La page d’accueil met en avant les opportunités et un accès pour
+                postuler, puis oriente vers les services, les offres, les
+                actualités, la FAQ et les informations sur Zenith. Cette
+                structure donne aux visiteurs plusieurs chemins pour découvrir
+                l’accompagnement et passer à l’étape suivante.
+              </p>
+            </article>
+            <article class="project-detail-block project-detail-reveal">
+              <h2>Technologies</h2>
+              <p>Next.js, Tailwind CSS, CSS, Node.js et MySQL.</p>
+            </article>
+          </div>
+
+          <div class="project-detail-actions project-detail-reveal">
+            <a
+              class="btn"
+              href="https://zenithproject.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visiter le projet
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <div class="contact-brand">
+            <span class="contact-brand-icon" aria-hidden="true">
+              <img src="../../assets/images/logo_mode_sombre.png" alt="" />
+            </span>
+            <span>Rivo Andriharisoa</span>
+          </div>
+          <h2>Travaillons ensemble.</h2>
+          <div class="cgrid">
+            <div>
+              <p>
+                Un projet, une question ou juste envie de discuter ? Écris-moi,
+                je réponds en général sous 48 heures.
+              </p>
+              <a class="mail" href="mailto:rivoandriharisoa@gmail.com"
+                >rivoandriharisoa@gmail.com</a
+              >
+              <div class="socials">
+                <a
+                  href="https://www.facebook.com/share/16JKdw24Rqz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/andriharisoa-rivo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+            <form id="contact-form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Ton nom"
+                required
+                aria-label="Ton nom"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Ton e-mail"
+                required
+                aria-label="Ton e-mail"
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Ton message"
+                required
+                aria-label="Ton message"
+              ></textarea>
+              <button class="btn" type="submit">Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        © <span id="annee"></span> Rivo Andriharisoa. Tous droits réservés.
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script src="../../script.js" defer></script>
+    <script src="../js/project-detail.js" defer></script>
+  </body>
+</html>

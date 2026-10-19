@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rivo Andriharisoa – Développeur full-stack web et mobile</title>
+    <meta
+      name="description"
+      content="Portfolio de Rivo Andriharisoa, développeur full-stack web et mobile."
+    />
+    <link rel="icon" type="image/png" href="assets/images/logo_fenetre.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="intro-overlay" aria-hidden="true">
+      <span class="intro-orb"></span>
+      <span class="splash-ball">
+        <img src="assets/images/foot.png" alt="" />
+      </span>
+      <img
+        class="splash-logo"
+        src="assets/images/logo_mode_sombre.png"
+        alt=""
+      />
+      <div class="splash-copy">
+        <p class="splash-greeting"></p>
+        <p class="splash-welcome">Bienvenue sur mon univers</p>
+      </div>
+    </div>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="#top">
+          <span class="logo-icon" aria-hidden="true">
+            <img
+              class="logo-image logo-image-light"
+              src="assets/images/logo_mode_claire.png"
+              alt=""
+            />
+            <img
+              class="logo-image logo-image-dark"
+              src="assets/images/logo_mode_sombre.png"
+              alt=""
+            />
+          </span>
+          <span>Rivo Andriharisoa</span>
+        </a>
+        <nav id="navigation-principale" aria-label="Navigation principale">
+          <a href="#services">Services</a>
+          <a href="#projets">Projets</a>
+          <a href="#apropos">À propos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Activer le mode sombre"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+              ></path>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="navigation-principale"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-photo">
+          <img
+            src="assets/images/me.png"
+            alt="Rivo Andriharisoa devant son ordinateur"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-badges" aria-label="Mes qualités professionnelles">
+          <div class="hero-badge badge-proactif">
+            <span class="badge-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path
+                  d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"
+                ></path>
+                <path
+                  d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"
+                ></path>
+              </svg>
+            </span>
+            <span class="badge-label">Proactif</span>
+            <span class="badge-status" aria-hidden="true"></span>
+          </div>
+          <div class="hero-badge badge-reactif">
+            <span class="badge-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M20 7v5h-5M4 17v-5h5"></path>
+                <path
+                  d="M5.6 9a7 7 0 0 1 11.6-2L20 12M4 12l2.8 5a7 7 0 0 0 11.6-2"
+                ></path>
+              </svg>
+            </span>
+            <span class="badge-label">Réactif</span>
+            <span class="badge-status" aria-hidden="true"></span>
+          </div>
+          <div class="hero-badge badge-dynamique">
+            <span class="badge-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"></path>
+              </svg>
+            </span>
+            <span class="badge-label">Dynamique</span>
+            <span class="badge-status" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="wrap hero-inner">
+          <h1 id="hero-title">
+            <span>Rivo Andriharisoa,</span
+            ><span class="stroke"
+              ><span class="role-line">Développeur</span
+              ><span class="role-line">full-stack web et</span
+              ><span class="role-line">mobile</span></span
+            >
+          </h1>
+          <p>
+            Salut ! Moi, c’est Rivo, développeur full-stack. En gros, je
+            transforme les idées en sites web et applications mobiles, et les
+            bugs en <span class="marker">petites crises existentielles</span> !
+          </p>
+          <div class="actions">
+            <a class="btn" href="#projets">Voir mes projets</a>
+            <a class="btn ghost" href="#contact">Me contacter</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="track">
+          <span>Développement web</span><span>✦</span><span>Proactif</span
+          ><span>✦</span><span>Applications mobiles</span><span>✦</span
+          ><span>Créativité</span><span>✦</span><span>Réactif</span
+          ><span>✦</span><span>Autonome</span><span>✦</span
+          ><span>Dynamique</span><span>✦</span><span>Développement web</span
+          ><span>✦</span>
+        </div>
+      </div>
+
+      <section class="stats-section" aria-label="Quelques chiffres">
+        <div class="wrap stats">
+          <div class="stat">
+            <strong data-count="1" data-suffix=" an">1 an</strong>
+            <span>d’expérience</span>
+          </div>
+          <div class="stat">
+            <strong data-count="15" data-suffix=" +">15 +</strong>
+            <span>projets réalisés</span>
+          </div>
+          <div class="stat">
+            <strong data-count="100" data-suffix="%">100%</strong>
+            <span>autonome</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" aria-labelledby="services-title">
+        <div class="wrap">
+          <span class="section-eyebrow">Services</span>
+          <h2 id="services-title">Ce que je fais<br />de mieux.</h2>
+          <div class="service-cards">
+            <article class="service-card">
+              <span class="service-type">Design</span>
+              <h3>Interfaces sur mesure</h3>
+              <p>
+                Des interfaces claires et modernes, pensées pour ton public, ton
+                image de marque et une expérience agréable sur tous les écrans.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-type">Développement web</span>
+              <h3>Sites rapides et accessibles</h3>
+              <p>
+                Des sites responsive et performants, construits avec du code
+                soigné et les bonnes pratiques du web.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-type">Mobile</span>
+              <h3>Applications mobiles</h3>
+              <p>
+                Des applications mobiles intuitives et adaptées à tes besoins,
+                de la conception des écrans jusqu’au développement.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets">
+        <div class="wrap">
+          <span class="section-eyebrow">Projets</span>
+          <h2>Réalisations<br />choisies.</h2>
+          <div class="filters" role="group" aria-label="Filtrer les projets">
+            <button type="button" data-filter="all" aria-pressed="true">
+              Tous
+            </button>
+            <button type="button" data-filter="site" aria-pressed="false">
+              Sites
+            </button>
+            <button type="button" data-filter="app" aria-pressed="false">
+              Applications
+            </button>
+          </div>
+
+          <div class="grid" id="liste">
+            <article class="work wide" data-cat="app">
+              <div class="shot">
+                <a
+                  class="work-details-link"
+                  href="details/html/projet-skaneo.html"
+                  aria-label="Voir le détail du projet Skaneo"
+                >
+                  Détails <span aria-hidden="true">↗</span>
+                </a>
+                <img
+                  class="project-image-light"
+                  src="assets/images/skaneo_mode_claire.png"
+                  alt="Présentation de Skaneo et aperçu de son application mobile de scan"
+                  loading="lazy"
+                />
+                <img
+                  class="project-image-dark"
+                  src="assets/images/skaneo_mode_sombre.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+              <div class="info">
+                <h3 class="p-title">
+                  Skaneo – Application mobile de scan de cartes de recharge
+                </h3>
+                <p>
+                  Une application Android pensée pour simplifier les recharges
+                  au quotidien : elle lit les cartes Yas, Orange et Airtel par
+                  caméra ou depuis une image, puis prépare la commande USSD.
+                  Multi-scan, retraits Mobile Money et interface en français ou
+                  en malgache sont disponibles hors ligne, sans compte ni
+                  connexion Internet.
+                </p>
+                <a
+                  href="https://skaneo.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voir le projet <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="work" data-cat="site">
+              <div class="shot">
+                <a
+                  class="work-details-link"
+                  href="details/html/projet-zenith.html"
+                  aria-label="Voir le détail du projet Zenith Project"
+                >
+                  Détails <span aria-hidden="true">↗</span>
+                </a>
+                <img
+                  class="project-image-light"
+                  src="assets/images/zenith_mode_claire.png"
+                  alt="Page d’accueil Zenith présentant ses services de recrutement international"
+                  loading="lazy"
+                />
+                <img
+                  class="project-image-dark"
+                  src="assets/images/zenith_mode_sombre.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+              <div class="info">
+                <h3 class="p-title">Zenith Project</h3>
+                <p>
+                  Un site de présentation pour Zenith, qui met en relation les
+                  talents de Madagascar avec des opportunités professionnelles
+                  internationales et présente ses services, ses offres et ses
+                  actualités.
+                </p>
+                <a
+                  href="https://zenithproject.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voir le projet <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="work" data-cat="site">
+              <div class="shot">
+                <a
+                  class="work-details-link"
+                  href="details/html/projet-connecter-ia.html"
+                  aria-label="Voir le détail du projet Connecter IA"
+                >
+                  Détails <span aria-hidden="true">↗</span>
+                </a>
+                <img
+                  class="project-image-light"
+                  src="assets/images/connecter_IA_mode_claire.png"
+                  alt="Page d’accueil du colloque scientifique international Connecter IA"
+                  loading="lazy"
+                />
+                <img
+                  class="project-image-dark"
+                  src="assets/images/connecter_IA_mode_sombre.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+              <div class="info">
+                <h3 class="p-title">
+                  Connecter IA – Plateforme scientifique internationale
+                </h3>
+                <p>
+                  Une plateforme dédiée au colloque international Connecter IA.
+                  Elle rassemble les informations sur l’événement, ses axes de
+                  recherche, le calendrier, le comité scientifique et la
+                  soumission de propositions autour de l’IA en éducation.
+                </p>
+                <a
+                  href="https://connecter-ia.mg/fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voir le projet <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="work wide" data-cat="app">
+              <div class="shot">
+                <a
+                  class="work-details-link"
+                  href="details/html/projet-aro-epidemie.html"
+                  aria-label="Voir le détail du projet ARO Épidémie"
+                >
+                  Détails <span aria-hidden="true">↗</span>
+                </a>
+                <img
+                  class="project-image-light"
+                  src="assets/images/aro_mode_claire.png"
+                  alt="Tableau de bord du système ARO Épidémie Madagascar"
+                  loading="lazy"
+                />
+                <img
+                  class="project-image-dark"
+                  src="assets/images/aro_mode_sombre.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+              <div class="info">
+                <h3 class="p-title">
+                  ARO Épidémie – Système de gestion et de suivi des épidémies à
+                  Madagascar
+                </h3>
+                <p>
+                  Un outil de suivi épidémiologique adapté au contexte malgache.
+                  Son tableau de bord présente les cas, patients, déclarations
+                  et leur évolution, tandis que l’interface permet d’accéder aux
+                  rubriques de gestion des cas, maladies, patients, centres de
+                  santé et zones. Il vise à mieux organiser la surveillance et à
+                  éclairer la prise de décision en santé publique.
+                </p>
+                <a
+                  href="https://aro-epidemie-ebon.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voir le projet <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <p class="empty" id="vide" hidden>
+            Aucun projet dans cette catégorie pour le moment.
+          </p>
+        </div>
+      </section>
+
+      <section id="apropos">
+        <div class="wrap about">
+          <div class="about-intro">
+            <span class="section-eyebrow">À propos</span>
+            <h2>Derrière<br />l’écran.</h2>
+            <p class="lead">
+              Je suis développeur d’applications web et mobiles, passionné par
+              tout ce qui transforme une idée en quelque chose de concret… et
+              qui fonctionne vraiment, pas seulement sur la maquette.
+            </p>
+            <p>
+              J’aime créer des sites web et des applications mobiles modernes,
+              simples à utiliser et agréables à regarder. Mon objectif ? Écrire
+              du code propre, résoudre de vrais problèmes et rendre la
+              technologie un peu moins compliquée pour tout le monde.
+            </p>
+            <p>
+              En gros, tu apportes l’idée, je sors le clavier. On réfléchit, on
+              développe, on corrige quelques bugs (parce qu’ils aiment s’inviter
+              sans prévenir), et on finit par créer quelque chose dont on peut
+              être fiers.
+            </p>
+            <p>
+              <strong
+                >Du code, des idées et une bonne dose de caféine… même sans
+                café.</strong
+              >
+              <span aria-hidden="true">🚀</span>
+            </p>
+            <ul class="about-timeline" aria-label="Mes disponibilités">
+              <li><strong>Disponible pour un stage</strong></li>
+              <li><strong>Disponible pour des missions freelance</strong></li>
+              <li>
+                <strong
+                  >Disponible pour des missions CI/CD (intégration et
+                  déploiement continus)</strong
+                >
+              </li>
+              <li><strong>Disponible pour un contrat en alternance</strong></li>
+            </ul>
+          </div>
+          <div class="skills">
+            <h3>Compétences</h3>
+            <div class="skill-bubbles">
+              <div
+                class="skill-bubble"
+                data-tech="html"
+                style="--x: 4%; --y: 3%; --size: 96px; --delay: -0.3s"
+              >
+                HTML<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="css"
+                style="--x: 56%; --y: 0%; --size: 86px; --delay: -1.2s"
+              >
+                CSS<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="javascript"
+                style="--x: 29%; --y: 15%; --size: 100px; --delay: -2s"
+              >
+                JavaScript<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="typescript"
+                style="--x: 76%; --y: 17%; --size: 94px; --delay: -0.8s"
+              >
+                TypeScript<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="react"
+                style="--x: 1%; --y: 35%; --size: 92px; --delay: -1.6s"
+              >
+                React<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="nextjs"
+                style="--x: 47%; --y: 33%; --size: 84px; --delay: -2.4s"
+              >
+                Next.js<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="tailwind"
+                style="--x: 73%; --y: 41%; --size: 94px; --delay: -0.5s"
+              >
+                Tailwind CSS<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="react-native"
+                style="--x: 18%; --y: 52%; --size: 102px; --delay: -1.9s"
+              >
+                React Native<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="nativewind"
+                style="--x: 60%; --y: 55%; --size: 92px; --delay: -2.8s"
+              >
+                NativeWind<small>Frontend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="nodejs"
+                style="--x: 0%; --y: 68%; --size: 96px; --delay: -1s"
+              >
+                Node.js<small>Backend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="nestjs"
+                style="--x: 38%; --y: 70%; --size: 86px; --delay: -2.2s"
+              >
+                NestJS<small>Backend</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="postgresql"
+                style="--x: 76%; --y: 68%; --size: 96px; --delay: -0.6s"
+              >
+                PostgreSQL<small>Base de données</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="mysql"
+                style="--x: 3%; --y: 84%; --size: 86px; --delay: -1.4s"
+              >
+                MySQL<small>Base de données</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="sqlite"
+                style="--x: 32%; --y: 83%; --size: 92px; --delay: -2.6s"
+              >
+                SQLite<small>Base de données</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="git"
+                style="--x: 61%; --y: 85%; --size: 82px; --delay: -0.9s"
+              >
+                Git<small>Outil</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="github"
+                style="--x: 79%; --y: 82%; --size: 88px; --delay: -1.8s"
+              >
+                GitHub<small>Outil</small>
+              </div>
+              <div
+                class="skill-bubble"
+                data-tech="vscode"
+                style="--x: 50%; --y: 42%; --size: 92px; --delay: -2.5s"
+              >
+                VS Code<small>Outil</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <div class="contact-brand">
+            <span class="contact-brand-icon" aria-hidden="true">
+              <img src="assets/images/logo_mode_sombre.png" alt="" />
+            </span>
+            <span>Rivo Andriharisoa</span>
+          </div>
+          <h2>Travaillons ensemble.</h2>
+          <div class="cgrid">
+            <div>
+              <p>
+                Un projet, une question ou juste envie de discuter ? Écris-moi,
+                je réponds en général sous 48 heures.
+              </p>
+              <a class="mail" href="mailto:rivoandriharisoa@gmail.com"
+                >rivoandriharisoa@gmail.com</a
+              >
+              <div class="socials">
+                <a
+                  href="https://www.facebook.com/share/16JKdw24Rqz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/andriharisoa-rivo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+            <form id="contact-form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Ton nom"
+                required
+                aria-label="Ton nom"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Ton e-mail"
+                required
+                aria-label="Ton e-mail"
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Ton message"
+                required
+                aria-label="Ton message"
+              ></textarea>
+              <button class="btn" type="submit">Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        © <span id="annee"></span> Rivo Andriharisoa. Tous droits réservés.
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

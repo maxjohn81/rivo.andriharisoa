@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skaneo – Détail du projet | Rivo Andriharisoa</title>
+    <meta
+      name="description"
+      content="Découvrez Skaneo, une application Android hors ligne pour scanner des cartes de recharge et générer des commandes USSD."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../assets/images/logo_fenetre.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../css/project-detail.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="../../index.html#top">
+          <span class="logo-icon" aria-hidden="true">
+            <img
+              class="logo-image logo-image-light"
+              src="../../assets/images/logo_mode_claire.png"
+              alt=""
+            />
+            <img
+              class="logo-image logo-image-dark"
+              src="../../assets/images/logo_mode_sombre.png"
+              alt=""
+            />
+          </span>
+          <span>Rivo Andriharisoa</span>
+        </a>
+        <nav id="navigation-principale" aria-label="Navigation principale">
+          <a href="../../index.html#services">Services</a>
+          <a href="../../index.html#projets">Projets</a>
+          <a href="../../index.html#apropos">À propos</a>
+          <a href="../../index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Activer le mode sombre"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+              ></path>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="navigation-principale"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="project-detail-main" id="top">
+      <section class="project-detail" aria-labelledby="project-title">
+        <div class="wrap">
+          <a
+            class="project-back-link project-detail-reveal"
+            href="../../index.html#projets"
+            aria-label="Retour à la liste des projets"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 12H5m7 7-7-7 7-7"></path>
+            </svg>
+          </a>
+          <div class="project-detail-heading project-detail-reveal">
+            <span class="section-eyebrow">Application Android</span>
+            <h1 id="project-title">
+              Skaneo – Application mobile de scan de cartes de recharge
+            </h1>
+            <p class="project-detail-lead">
+              Une application mobile conçue pour rendre les recharges plus
+              simples au quotidien à Madagascar. Skaneo est le produit principal
+              ; son site sert à présenter et télécharger l’application.
+            </p>
+          </div>
+
+          <figure class="project-detail-image project-detail-reveal">
+            <img
+              class="project-image-light"
+              src="../../assets/images/skaneo_mode_claire.png"
+              alt="Page de présentation de Skaneo avec aperçu de l’application mobile"
+            />
+            <img
+              class="project-image-dark"
+              src="../../assets/images/skaneo_mode_sombre.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </figure>
+
+          <div class="project-detail-content">
+            <article class="project-detail-block project-detail-reveal">
+              <h2>Le problème</h2>
+              <p>
+                Saisir manuellement un long code de recharge peut être lent et
+                source d’erreurs. Il est aussi peu pratique de devoir reprendre
+                le processus pour chaque carte, ou de dépendre d’une connexion
+                Internet pour effectuer une opération simple. Skaneo vise à
+                alléger ces étapes pour les utilisateurs des opérateurs Yas,
+                Orange et Airtel.
+              </p>
+            </article>
+            <article class="project-detail-block project-detail-reveal">
+              <h2>La solution</h2>
+              <p>
+                L’application Android utilise la caméra ou une image importée
+                pour lire le code de recharge avec l’OCR, reconnaître
+                l’opérateur et préparer la commande USSD. Elle permet aussi
+                d’enchaîner plusieurs scans, de préparer des commandes de
+                retrait Mobile Money et d’utiliser l’interface en français ou en
+                malgache. Le traitement se fait hors ligne, sans compte.
+              </p>
+            </article>
+            <article class="project-detail-block project-detail-reveal">
+              <h2>Technologies</h2>
+              <p>
+                <strong>Application mobile :</strong> React Native, Google ML
+                Kit, React Native Notifications et AsyncStorage.
+              </p>
+              <p>
+                <strong>Site de présentation :</strong> HTML, CSS, JavaScript
+                vanilla, Redis et Vercel.
+              </p>
+            </article>
+          </div>
+
+          <div class="project-detail-actions project-detail-reveal">
+            <a
+              class="btn"
+              href="https://skaneo.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visiter le projet
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <div class="contact-brand">
+            <span class="contact-brand-icon" aria-hidden="true">
+              <img src="../../assets/images/logo_mode_sombre.png" alt="" />
+            </span>
+            <span>Rivo Andriharisoa</span>
+          </div>
+          <h2>Travaillons ensemble.</h2>
+          <div class="cgrid">
+            <div>
+              <p>
+                Un projet, une question ou juste envie de discuter ? Écris-moi,
+                je réponds en général sous 48 heures.
+              </p>
+              <a class="mail" href="mailto:rivoandriharisoa@gmail.com"
+                >rivoandriharisoa@gmail.com</a
+              >
+              <div class="socials">
+                <a
+                  href="https://www.facebook.com/share/16JKdw24Rqz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/andriharisoa-rivo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+            <form id="contact-form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Ton nom"
+                required
+                aria-label="Ton nom"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Ton e-mail"
+                required
+                aria-label="Ton e-mail"
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Ton message"
+                required
+                aria-label="Ton message"
+              ></textarea>
+              <button class="btn" type="submit">Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        © <span id="annee"></span> Rivo Andriharisoa. Tous droits réservés.
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script src="../../script.js" defer></script>
+    <script src="../js/project-detail.js" defer></script>
+  </body>
+</html>
