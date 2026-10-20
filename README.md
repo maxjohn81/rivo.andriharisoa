@@ -1,19 +1,11 @@
 # Rivo Andriharisoa - Portfolio
 
-Portfolio statique avec une fonction Vercel pour le formulaire de contact SMTP.
+Portfolio de Rivo Andriharisoa, developpeur d applications web et mobiles.
 
-## Formulaire de contact
+## Structure
 
-L’API /api/contact utilise Nodemailer côté serveur. Elle envoie les messages à maxandriharisoa@gmail.com et tente d’envoyer un accusé de réception au visiteur depuis SMTP_USER. Son adresse sert de Reply-To pour te permettre de lui répondre directement.
+- `index.html`, `style.css`, `script.js` : page principale.
+- `details/html/` : pages detaillees des projets.
+- `assets/images/` : logos, portraits et captures des projets.
 
-### Configuration locale
-
-1. Copie .env.example vers .env et renseigne les identifiants SMTP. Ne partage jamais et ne publie jamais .env.
-2. Lance npm install.
-3. Installe la CLI Vercel puis lance npm run dev. Le formulaire ne fonctionnera pas en ouvrant directement un fichier HTML.
-
-Variables requises : SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER et SMTP_PASS. Avec Gmail, utilise un mot de passe d’application et l’adresse autorisée à envoyer. SMTP_FROM est ignoré : l’expéditeur est le compte SMTP authentifié.
-
-### Déploiement Vercel
-
-Ajoute les cinq variables SMTP dans Project Settings > Environment Variables pour les environnements souhaités, puis redéploie. Ne place jamais de secret SMTP dans le frontend ou les journaux. La limitation anti-spam en mémoire complète le champ piège, mais un pare-feu Vercel ou un limiteur partagé est recommandé pour une protection forte.
+Le portfolio est un site statique. Les visiteurs peuvent contacter Rivo par e-mail ou via ses reseaux sociaux depuis le bloc Contact.

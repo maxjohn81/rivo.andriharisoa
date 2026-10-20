@@ -4,47 +4,6 @@ if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-var contactForm = document.getElementById("contact-form");
-if (contactForm) {
-  var contactStatus = contactForm.querySelector("[data-contact-status]");
-  var contactSubmit = contactForm.querySelector('[type="submit"]');
-
-  contactForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-    contactSubmit.disabled = true;
-    contactStatus.textContent = "Envoi en cours\u2026";
-    contactStatus.dataset.state = "sending";
-
-    var formData = new FormData(contactForm);
-    var payload = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-      website: formData.get("website")
-    };
-
-    try {
-      var response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      var result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.message || "L\u2019envoi a \u00e9chou\u00e9. R\u00e9essaie plus tard.");
-      }
-      contactStatus.textContent = result.message;
-      contactStatus.dataset.state = "success";
-      contactForm.reset();
-    } catch (error) {
-      contactStatus.textContent = error.message || "Impossible de contacter le serveur. V\u00e9rifie ta connexion puis r\u00e9essaie.";
-      contactStatus.dataset.state = "error";
-    } finally {
-      contactSubmit.disabled = false;
-    }
-  });
-}
-
 // Intro GSAP
 function splitIntoCharacters(element, accessibleText) {
   var text = element.textContent;
@@ -445,10 +404,7 @@ try {
 } catch (error) {
   console.error("Impossible de lire le thème enregistré.", error);
 }
-var darkTheme =
-  savedTheme === "dark" ||
-  (savedTheme !== "light" &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches);
+var darkTheme = savedTheme === "dark";
 document.body.classList.toggle("dark-theme", darkTheme);
 themeToggle.setAttribute("aria-pressed", darkTheme);
 themeToggle.setAttribute(

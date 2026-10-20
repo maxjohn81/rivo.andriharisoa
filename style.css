@@ -907,12 +907,6 @@ body.dark-theme .shot .project-image-dark {
 .contact h2 {
   font-size: clamp(2.6rem, 9vw, 6.5rem);
 }
-.cgrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
-  gap: 56px;
-}
 .contact p {
   max-width: 34em;
   color: #b9c3d6;
@@ -940,46 +934,6 @@ body.dark-theme .shot .project-image-dark {
 }
 .socials a:hover {
   color: var(--sun);
-}
-.contact form {
-  display: grid;
-  gap: 14px;
-}
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 15px 18px;
-  border: 2px solid #3a4a6b;
-  border-radius: 14px;
-  background: #1a2b4d;
-  color: #fff;
-  font: inherit;
-  font-size: 1rem;
-}
-.contact input::placeholder,
-.contact textarea::placeholder {
-  color: #8a96ae;
-}
-.contact input:focus,
-.contact textarea:focus {
-  border-color: var(--sun);
-  outline: 2px solid var(--sun);
-  outline-offset: 2px;
-}
-.contact textarea {
-  resize: vertical;
-}
-.contact form .btn {
-  justify-self: start;
-  border-color: var(--sun);
-  background: var(--sun);
-  color: var(--ink);
-  cursor: pointer;
-  font-size: 1rem;
-}
-.contact form .btn:hover {
-  border-color: #fff;
-  background: #fff;
 }
 footer {
   background: var(--contact);
@@ -1189,11 +1143,7 @@ body.dark-theme .filters button[aria-pressed="true"] {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .cgrid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .about-intro {
+    .about-intro {
     order: 1;
   }
   .skills {
@@ -1252,29 +1202,4 @@ body.dark-theme .filters button[aria-pressed="true"] {
     order: 2;
     min-width: 0;
   }
-}
-
-.contact-honeypot {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-.contact-form-status {
-  min-height: 1.5em;
-  margin: 0;
-  color: #b9c3d6;
-  font-size: 0.95rem;
-}
-.contact-form-status[data-state="success"] {
-  color: #8ee6b0;
-}
-.contact-form-status[data-state="error"] {
-  color: #ffaaa0;
-}
-.contact form .btn:disabled {
-  cursor: wait;
-  opacity: 0.7;
 }

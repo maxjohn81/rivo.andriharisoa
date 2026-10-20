@@ -21,5 +21,4 @@ coverage/
 # Environment variables and secrets
 .env
 .env.*
-!.env.example
 .vercel/
