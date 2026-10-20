@@ -109,7 +109,7 @@ body.intro-playing .intro-overlay {
 .splash-greeting,
 .splash-welcome {
   margin: 0;
-  font-family: var(--display);
+  font-family: var(--heading);
   font-weight: 700;
 }
 .splash-greeting {
@@ -243,6 +243,15 @@ nav a[aria-current="location"] {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
+}
+.menu-icon-close {
+  display: none;
+}
+.menu-toggle[aria-expanded="true"] .menu-icon-bars {
+  display: none;
+}
+.menu-toggle[aria-expanded="true"] .menu-icon-close {
+  display: block;
 }
 .moon-icon,
 .menu-toggle {
@@ -1065,7 +1074,7 @@ body.dark-theme .filters button[aria-pressed="true"] {
     width: fit-content;
     padding: 0;
     border: 0;
-    font-family: var(--display);
+    font-family: var(--heading);
     font-size: clamp(2.5rem, 11vw, 5rem);
     font-weight: 800;
     line-height: 1.05;
