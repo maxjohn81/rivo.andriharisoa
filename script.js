@@ -47,7 +47,6 @@ function playIntro() {
   var badges = hero.querySelectorAll(".hero-badge");
   var splashBall = overlay.querySelector(".splash-ball");
   var splashLogo = overlay.querySelector(".splash-logo");
-  var splashGreeting = overlay.querySelector(".splash-greeting");
   var splashWelcome = overlay.querySelector(".splash-welcome");
   var reducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
@@ -65,13 +64,6 @@ function playIntro() {
       return line.textContent;
     })
     .join(" ");
-  var currentHour = new Date().getHours();
-  splashGreeting.textContent =
-    currentHour >= 5 && currentHour < 12
-      ? "Bonjour"
-      : currentHour < 18
-        ? "Bon après-midi"
-        : "Bonsoir";
   var welcomeCharacters = splitIntoCharacters(splashWelcome);
   var roleCharacters = splitIntoCharacters(role, roleLabel);
   var timeline = window.gsap.timeline({
@@ -138,7 +130,6 @@ function playIntro() {
     },
     "<",
   );
-  timeline.to(splashGreeting, { opacity: 1, y: 0, duration: 0.35 }, ">-0.12");
   timeline.from(
     welcomeCharacters,
     {
@@ -428,20 +419,45 @@ themeToggle.addEventListener("click", function () {
 // Menu mobile
 var menuToggle = document.querySelector(".menu-toggle");
 var navigation = document.getElementById("navigation-principale");
+var menuClose = navigation.querySelector(".nav-close");
+var scrollPositionBeforeMenu = 0;
+
 function closeMenu() {
+  var menuOuvert = navigation.classList.contains("is-open");
   navigation.classList.remove("is-open");
   document.body.classList.remove("menu-open");
+  if (menuOuvert) {
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+    window.scrollTo(0, scrollPositionBeforeMenu);
+  }
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Ouvrir le menu");
 }
+
+function openMenu() {
+  scrollPositionBeforeMenu = window.scrollY;
+  document.body.style.position = "fixed";
+  document.body.style.top = "-" + scrollPositionBeforeMenu + "px";
+  document.body.style.width = "100%";
+  navigation.classList.add("is-open");
+  document.body.classList.add("menu-open");
+  menuToggle.setAttribute("aria-expanded", "true");
+  menuToggle.setAttribute("aria-label", "Fermer le menu");
+  menuClose.focus();
+}
+
 menuToggle.addEventListener("click", function () {
-  var menuOuvert = navigation.classList.toggle("is-open");
-  document.body.classList.toggle("menu-open", menuOuvert);
-  menuToggle.setAttribute("aria-expanded", menuOuvert);
-  menuToggle.setAttribute(
-    "aria-label",
-    menuOuvert ? "Fermer le menu" : "Ouvrir le menu",
-  );
+  if (navigation.classList.contains("is-open")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+menuClose.addEventListener("click", function () {
+  closeMenu();
+  menuToggle.focus();
 });
 navigation.querySelectorAll("a").forEach(function (lien) {
   lien.addEventListener("click", closeMenu);
@@ -450,6 +466,11 @@ document.addEventListener("keydown", function (event) {
   if (event.key === "Escape" && navigation.classList.contains("is-open")) {
     closeMenu();
     menuToggle.focus();
+  }
+});
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 760 && navigation.classList.contains("is-open")) {
+    closeMenu();
   }
 });
 

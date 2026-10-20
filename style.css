@@ -106,19 +106,12 @@ body.intro-playing .intro-overlay {
   color: #fff;
   text-align: center;
 }
-.splash-greeting,
 .splash-welcome {
   margin: 0;
   font-family: var(--heading);
   font-weight: 700;
 }
-.splash-greeting {
-  color: var(--sun);
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
-  opacity: 0;
-}
 .splash-welcome {
-  margin-top: 8px;
   font-size: clamp(1.7rem, 6vw, 3.6rem);
   font-weight: 800;
   line-height: 1.1;
@@ -245,6 +238,9 @@ nav a[aria-current="location"] {
   stroke-width: 1.8;
 }
 .menu-icon-close {
+  display: none;
+}
+.nav-close {
   display: none;
 }
 .menu-toggle[aria-expanded="true"] .menu-icon-bars {
@@ -1014,6 +1010,32 @@ body.dark-theme .filters button[aria-pressed="true"] {
       opacity 0.3s ease var(--transition-delay),
       transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) var(--transition-delay),
       visibility 0s linear 0.45s;
+  }
+  header nav .nav-close {
+    position: absolute;
+    top: 80px;
+    right: 24px;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  header nav .nav-close svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+  }
+  header nav .nav-close:hover {
+    background: var(--line);
   }
   header nav.is-open {
     opacity: 1;
