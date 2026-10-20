@@ -1166,7 +1166,7 @@ body.dark-theme .filters button[aria-pressed="true"] {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-    .about-intro {
+  .about-intro {
     order: 1;
   }
   .skills {
