@@ -232,7 +232,13 @@
                 required
                 aria-label="Ton message"
               ></textarea>
+              <div class="contact-honeypot" aria-hidden="true">
+                <label>Ne remplis pas ce champ
+                  <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                </label>
+              </div>
               <button class="btn" type="submit">Envoyer le message</button>
+              <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>

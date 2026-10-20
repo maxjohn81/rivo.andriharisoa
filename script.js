@@ -6,22 +6,42 @@ if (yearElement) {
 
 var contactForm = document.getElementById("contact-form");
 if (contactForm) {
-  contactForm.addEventListener("submit", function (event) {
+  var contactStatus = contactForm.querySelector("[data-contact-status]");
+  var contactSubmit = contactForm.querySelector('[type="submit"]');
+
+  contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
+    contactSubmit.disabled = true;
+    contactStatus.textContent = "Envoi en cours\u2026";
+    contactStatus.dataset.state = "sending";
+
     var formData = new FormData(contactForm);
-    var subject = "Message depuis le portfolio de Rivo";
-    var body =
-      "Nom : " +
-      formData.get("name") +
-      "\nE-mail : " +
-      formData.get("email") +
-      "\n\nMessage :\n" +
-      formData.get("message");
-    window.location.href =
-      "mailto:rivoandriharisoa@gmail.com?subject=" +
-      encodeURIComponent(subject) +
-      "&body=" +
-      encodeURIComponent(body);
+    var payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+      website: formData.get("website")
+    };
+
+    try {
+      var response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      var result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.message || "L\u2019envoi a \u00e9chou\u00e9. R\u00e9essaie plus tard.");
+      }
+      contactStatus.textContent = result.message;
+      contactStatus.dataset.state = "success";
+      contactForm.reset();
+    } catch (error) {
+      contactStatus.textContent = error.message || "Impossible de contacter le serveur. V\u00e9rifie ta connexion puis r\u00e9essaie.";
+      contactStatus.dataset.state = "error";
+    } finally {
+      contactSubmit.disabled = false;
+    }
   });
 }
 

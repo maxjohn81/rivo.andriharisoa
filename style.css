@@ -1153,6 +1153,15 @@ body.dark-theme .filters button[aria-pressed="true"] {
   .hero h1 .role-line {
     font-size: clamp(1.9rem, 8.5vw, 2.9rem);
   }
+  .marquee {
+    width: 100%;
+    margin: 0;
+    transform: none;
+  }
+  .track {
+    gap: 24px;
+    font-size: clamp(1rem, 4.2vw, 1.3rem);
+  }
   .stats-section {
     padding: 32px 0 24px;
   }
@@ -1243,4 +1252,29 @@ body.dark-theme .filters button[aria-pressed="true"] {
     order: 2;
     min-width: 0;
   }
+}
+
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.contact-form-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: #b9c3d6;
+  font-size: 0.95rem;
+}
+.contact-form-status[data-state="success"] {
+  color: #8ee6b0;
+}
+.contact-form-status[data-state="error"] {
+  color: #ffaaa0;
+}
+.contact form .btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
 }
