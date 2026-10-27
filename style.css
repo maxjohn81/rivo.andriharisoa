@@ -841,6 +841,12 @@ body.dark-theme .shot .project-image-dark {
 .skill-bubble[data-tech="nestjs"] {
   --bubble-color: #e0234e;
 }
+.skill-bubble[data-tech="fastapi"] {
+  --bubble-color: #009688;
+}
+.skill-bubble[data-tech="spring-boot"] {
+  --bubble-color: #6db33f;
+}
 .skill-bubble[data-tech="postgresql"] {
   --bubble-color: #4169e1;
 }
